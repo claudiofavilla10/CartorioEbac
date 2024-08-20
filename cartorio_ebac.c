@@ -11,7 +11,7 @@ int registro() //Função responsável por cadastrar os usuários no sistema
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
-	//fim da criação das variáveia
+	//fim da criação das variáveis
 	
 	printf("Digite o CPF a ser cadastrado: ");
 	scanf("%s", cpf); //%s refere-se a string
@@ -109,7 +109,7 @@ int deletar()
 	FILE *file;
 	file = fopen(cpf,"r"); 	
 	
-	remove(cpf);
+	remove(cpf); //define a exclusão do cadastro indicado
 	{
 		printf("\tUsuário deletado com sucesso!\n\n");
 		system("pause");
@@ -137,6 +137,7 @@ int main()
 			printf("\t1 - Registrar nomes\n");
 			printf("\t2 - Consultar nomes\n");
 			printf("\t3 - Deletar nomes\n\n");
+			printf("\t4 - Sair do sistema\n\n");
 			printf("   Opção: "); //fim do menu
 	
 		scanf("%d", &opcao); //armazenando escolha do usuário
@@ -157,6 +158,12 @@ int main()
 			case 3:
 			deletar(); //chamada das funções
 			break;
+			
+			case 4:
+			printf("\n\tObrigado e até mais!\n");
+			return 0;
+			break;
+			
 			
 			default: //erro de seleção
 			printf("\n\tOpção inválida! Escolha umas das opções disponíveis no Menu.\n\n");
