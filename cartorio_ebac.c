@@ -160,7 +160,7 @@ int main()
 		{
 			
 				setlocale(LC_ALL, "Portuguese"); //definindo o idioma
-	
+				system("cls");
 				printf("       ### Cartório da EBAC ###\n\n"); //Título Principal
 				printf("   Escolha a opção desejada no menu:\n\n"); //menu inicial
 				printf("\t1 - Registrar nomes\n");
